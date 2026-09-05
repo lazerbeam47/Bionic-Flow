@@ -109,7 +109,7 @@ The validation pipeline (`src/lib/radiology/validators/`) inspects generated rep
 ## 7. Mock Mode & Error Handling
 
 - **Mock Mode (Default)**: Runs out of the box with zero external dependencies or API keys. For Case 3, it intentionally injects the three safety errors so reviewers can immediately evaluate validator and auto-fix capabilities.
-- **Groq Mode**: When `GROQ_API_KEY` is provided in the environment, the server calls Groq API (`llama-3.3-70b-versatile`) with strict JSON schema enforcement and temperature 0.
+- **Groq Mode**: When `GROQ_API_KEY` is provided in the environment, the server calls Groq API (`openai/gpt-oss-120b`) with strict JSON schema enforcement and temperature 0.
 - **Graceful Error Handling**:
   - Empty dictations are rejected client-side with clear validation alerts.
   - LLM timeouts (15s abort controller), network drops, or malformed JSON trigger graceful fallback messages without crashing the application.

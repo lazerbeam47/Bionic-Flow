@@ -24,7 +24,7 @@ class GroqReportGenerator implements ReportGenerator {
         headers: { Authorization: `Bearer ${this.apiKey}`, "Content-Type": "application/json" },
         signal: controller.signal,
         body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
+          model: "openai/gpt-oss-120b",
           temperature: 0,
           response_format: { type: "json_object" },
           messages: [
